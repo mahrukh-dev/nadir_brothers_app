@@ -11,9 +11,12 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+
   TextEditingController userController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
+  TextEditingController numController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +56,10 @@ class _SignUpState extends State<SignUp> {
                 const SizedBox(
                   height: 10,
                 ),
+                textFieldWidget("PHONE NUMBER", Icons.phone, false, numController),
+                const SizedBox(
+                  height: 10,
+                ),
                 textFieldWidget("EMAIL", Icons.account_circle, false, emailController),
                 const SizedBox(
                   height: 10,
@@ -68,6 +75,7 @@ class _SignUpState extends State<SignUp> {
                         const Home()
                     )
                     );
+                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Account created Successfully")));
                   }).onError((error, stackTrace) {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Create Account Failed")));
                   });

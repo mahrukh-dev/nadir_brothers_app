@@ -39,12 +39,22 @@ class _SignInState extends State<SignIn> {
               children: <Widget>[
                 logoWidget("assets/images/logo.png"),
                 const SizedBox(
-                  height: 30,
+                  height: 15,
+                ),
+                const Text(
+                    "Nadir Brothers",
+                    style: TextStyle(
+                        color: Colors.white70,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 40)
+                ),
+                const SizedBox(
+                  height: 20,
                 ),
                 textFieldWidget("Enter User", Icons.account_circle_outlined,
                     false, userController),
                 const SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 textFieldWidget("Enter Password", Icons.lock_outline_rounded,
                     true, passController),

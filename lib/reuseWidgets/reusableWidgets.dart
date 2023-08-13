@@ -1,11 +1,100 @@
 import 'package:flutter/material.dart';
+import 'package:nadir_brothers_app/screens/my_address_page.dart';
+import 'package:nadir_brothers_app/screens/my_favorites_page.dart';
+import 'package:nadir_brothers_app/screens/my_orders.dart';
+import 'package:nadir_brothers_app/screens/signin_page.dart';
+
+AppBar customAppBar(){
+  return AppBar(
+    backgroundColor: Colors.black,
+    elevation: 0,
+    title: const Text(
+      "Nadir Brothers",
+      style: TextStyle(
+        color: Colors.teal,
+        fontWeight: FontWeight.bold,
+        fontSize: 24,
+      ),
+    ),
+  );
+}
+
+Drawer customDrawer(BuildContext context){
+  return Drawer(
+    child: ListView(
+      padding: EdgeInsets.zero,
+      children: [
+        const UserAccountsDrawerHeader(
+          accountEmail: Text(
+            'Nadir Brothers',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+            ),
+          ),
+          accountName: Text(''),
+          currentAccountPicture: CircleAvatar(
+            backgroundImage: AssetImage("assets/images/logo.png"),
+          ),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.teal,
+                Colors.deepPurple,
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ),
+        ListTile(
+          title: const Text('My Orders'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const MyOrders()
+            )
+            );
+          },
+        ),
+        ListTile(
+          title: const Text('My Addresses'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const MyAddresses()
+            )
+            );
+          },
+        ),
+        ListTile(
+          title: const Text('My Favorites'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const MyFav()
+            )
+            );
+          },
+        ),
+        ListTile(
+          title: const Text('Logout'),
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(
+                builder: (context) => const SignIn()
+            )
+            );
+          },
+        ),
+      ],
+    ),
+  );
+}
 
 Image logoWidget(String ImageName) {
   return Image.asset(
     ImageName,
     fit: BoxFit.fitWidth,
-    width: 240,
-    height: 240,
+    width: 200,
+    height: 200,
   );
 }
 
