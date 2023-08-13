@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "736611704844",
+    "project_id": "nadirbrothersorderapp",
+    "storage_bucket": "nadirbrothersorderapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736611704844:android:d0dbe13547636c8b4a0e29",
+        "android_client_info": {
+          "package_name": "com.mahrukhdev.nadir_brothers_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736611704844-ijcfevr0his9ltde414cdn01obpontvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzyQQnPP4pnlCZaukTcR6o6v8G_rl6Tbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "736611704844-ijcfevr0his9ltde414cdn01obpontvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
